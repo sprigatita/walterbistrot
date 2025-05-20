@@ -1,0 +1,21 @@
+.photo-strip-gallery {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.strip {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.strip img {
+  height: 250px; // stessa altezza per tutte
+  object-fit: cover;
+  flex: 1;
+  border: none;
+  margin: 0;
+  padding: 0;
+}

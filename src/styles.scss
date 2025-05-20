@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --color-background: #02070c; /* panna */
+  //--color-background: #0d1b2a; /* panna */
+  --color-text: #fdf6ec;        /* blu scuro */
+  --color-primary: #fdf6ec;
+  --font-family-base: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+

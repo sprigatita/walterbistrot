@@ -1,0 +1,32 @@
+.footer {
+  background-color: #fdf6e3; // color panna
+  color: #0d1b2a; // blu scuro
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 100%;
+
+  @media (min-width: 768px) {
+    flex: 1 1 45%;
+  }
+}
+
+.footer-left{
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding-left: 2rem;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin: 0.3rem 0;
+}
