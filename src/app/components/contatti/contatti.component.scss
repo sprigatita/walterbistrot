@@ -1,25 +1,34 @@
 .footer {
-  background-color: #fdf6e3; // color panna
-  color: #0d1b2a; // blu scuro
+  background-color: #fdf6e3; /* color panna */
+  color: #0d1b2a; /* blu scuro */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 2rem 1rem;
+  gap: 2rem;
 }
 
 .footer-left,
 .footer-right {
   flex: 1 1 100%;
-
-  @media (min-width: 768px) {
-    flex: 1 1 45%;
-  }
 }
 
-.footer-left{
-  margin-left: 1rem;
-  margin-top: 1rem;
-  padding-left: 2rem;
+@media (min-width: 768px) {
+  .footer-left,
+  .footer-right {
+    flex: 1 1 45%;
+  }
+
+  .footer-left {
+    margin-left: 1rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+
+  .footer-right iframe {
+    height: 250px;
+  }
 }
 
 .footer-logo {
@@ -29,4 +38,28 @@
 
 .contact-info p {
   margin: 0.3rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+  .footer-left {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 1rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+
+  .footer-right iframe {
+    height: 200px;
+    width: 100%;
+  }
 }
