@@ -3,19 +3,22 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-.hero-bg {
+.hero-mobile {
+  display: none;
+}
+.hero-desktop {
   display: block;
   width: 100%;
   height: 100vh;
   object-fit: cover;
   object-position: center; // tiene il soggetto centrato
 }
+
 
 .hero-logo {
   width: 800px;
@@ -29,7 +32,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Mette il video dietro agli altri contenuti */
+  z-index: -1;
 }
 
 .video-container video {
@@ -80,6 +83,43 @@
   .hero-logo {
     width: 200px; /* Logo compatto su schermi molto piccoli */
   }
+  .hero-banner {
+    height: 100vh;
+    width: 100vw;   /* Assicuriamoci che prenda l’intera larghezza */
+    overflow: hidden;
+
+    /* Nasconde la versione desktop e mostra quella mobile */
+    .hero-desktop {
+      display: none;
+    }
+    .hero-mobile {
+      display: block;
+
+      /*
+        Impostiamo esattamente 100 vh×100 vw,
+        in modo che l’img riempia tutta la viewport
+      */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      /*
+        object-fit: cover → riempie l’intero box
+        (100%×100%), ritagliando i lati se serve
+      */
+      object-fit: cover;
+      object-position: center center;
+      z-index: 1;
+    }
+
+    /* Overlay (logo, pulsante, ecc.) rimane sopra all’immagine */
+    .overlay {
+      z-index: 2;
+    }
+  }
+
 }
 
 

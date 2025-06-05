@@ -1,6 +1,7 @@
 .menu-section {
   width: 100%;
   padding-bottom: 4rem;
+  padding-top: 4rem;
 }
 
 .menu-container {
@@ -90,7 +91,7 @@
 
 @media (max-width: 480px) {
   .menu-section {
-    padding: 2rem 1rem;
+    padding-bottom: 2rem;
   }
 
   .menu-content h2 {
@@ -133,4 +134,68 @@
   height: auto;
   border-radius: 6px;
   object-fit: cover;
+}
+
+/* ================================ */
+/* ✅ Responsive: da 1024px in giù, ridimensiono le immagini e mantengo due colonne */
+/* ================================ */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* La gallery resta a due “colonne” affiancate, ma con le colonne più strette */
+  .custom-gallery {
+    flex-direction: row;
+    flex-wrap: nowrap; /* NON faccio wrap delle colonne, restano affiancate */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Mantengo la colonna in senso verticale per le prime due immagini */
+  .image-column {
+    flex-direction: column; /* anziché row */
+    gap: 10px;
+  }
+
+  .image-single {
+    justify-content: center;
+  }
+
+  /* Ridimensiono le singole immagini usando percentuali relative */
+  .mini-image {
+    width: 35vw;      /* circa un terzo dello schermo */
+    max-width: 200px; /* con un tetto massimo */
+  }
+}
+
+/* ================================ */
+/* ✅ Responsive: da 480px in giù, riduco ulteriormente */
+/* ================================ */
+@media (max-width: 480px) {
+  /* Le due colonne possono restare affiancate, ma molto piccole;
+     dato lo spazio ridotto, le immagini devono essere davvero compatte */
+  .custom-gallery {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .image-column {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mini-image {
+    width: 28vw;      /* circa poco meno di un terzo dello schermo */
+    max-width: 120px; /* con un tetto inferiore */
+  }
+
+  .about-text {
+    padding: 0 10px;
+  }
 }
