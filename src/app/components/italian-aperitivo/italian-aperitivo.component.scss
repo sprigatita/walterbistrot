@@ -1,0 +1,146 @@
+.italian-aperitivo {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  color: #fff;
+
+  .background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); // velo nero opaco
+    z-index: 1;
+  }
+
+  .aperitivo-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .aperitivo-text {
+      max-width: 600px;
+    }
+
+    h2, p {
+      color: #fff;
+    }
+  }
+}
+
+
+
+.about-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-wrap: wrap; /* permette alle colonne di adattarsi in base alle dimensioni */
+}
+
+.custom-gallery {
+  display: flex;
+  gap: 10px;
+}
+
+/* Mantieni due colonne: .image-column contiene due immagini in verticale,
+   e .image-single contiene l’unica immagine affiancata */
+.image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-single {
+  display: flex;
+  align-items: center;
+}
+
+
+.mini-image {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+
+/* ================================ */
+/* ✅ Responsive: da 1024px in giù, ridimensiono le immagini e mantengo due colonne */
+/* ================================ */
+@media (max-width: 1024px) {
+  .aperitivo-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* La gallery resta a due “colonne” affiancate, ma con le colonne più strette */
+  .custom-gallery {
+    flex-direction: row;
+    flex-wrap: nowrap; /* NON faccio wrap delle colonne, restano affiancate */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Mantengo la colonna in senso verticale per le prime due immagini */
+  .image-column {
+    flex-direction: column; /* anziché row */
+    gap: 10px;
+  }
+
+  .image-single {
+    justify-content: center;
+  }
+
+  /* Ridimensiono le singole immagini usando percentuali relative */
+  .mini-image {
+    width: 35vw;      /* circa un terzo dello schermo */
+    max-width: 200px; /* con un tetto massimo */
+  }
+}
+
+/* ================================ */
+/* ✅ Responsive: da 480px in giù, riduco ulteriormente */
+/* ================================ */
+@media (max-width: 480px) {
+  /* Le due colonne possono restare affiancate, ma molto piccole;
+     dato lo spazio ridotto, le immagini devono essere davvero compatte */
+  .custom-gallery {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .image-column {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mini-image {
+    width: 58vw;      /* circa poco meno di un terzo dello schermo */
+    //max-width: 120px; /* con un tetto inferiore */
+  }
+
+  .aperitivo-text {
+    padding: 0 10px;
+  }
+}
