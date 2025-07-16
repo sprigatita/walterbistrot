@@ -6,6 +6,7 @@ import {GalleryComponent} from '../../components/gallery/gallery.component';
 import {AnimatedDividerComponent} from '../../components/animated-divider/animated-divider.component';
 import {MenuComponent} from '../../components/menu/menu.component';
 import {ItalianAperitivoComponent} from '../../components/italian-aperitivo/italian-aperitivo.component';
+import {OrariComponent} from '../../components/orari/orari.component';
 
 @Component({
   selector: 'app-homepage',
@@ -17,7 +18,8 @@ import {ItalianAperitivoComponent} from '../../components/italian-aperitivo/ital
     GalleryComponent,
     AnimatedDividerComponent,
     MenuComponent,
-    ItalianAperitivoComponent
+    ItalianAperitivoComponent,
+    OrariComponent
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'

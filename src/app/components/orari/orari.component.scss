@@ -1,0 +1,68 @@
+.opening-hours-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  padding-bottom: 4rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f0e0d0;
+      flex-wrap: wrap;
+
+      .day {
+        font-weight: bold;
+        font-size: 1rem;
+        flex: 1 1 50%;
+      }
+
+      .hours {
+        font-style: italic;
+        color: #555;
+        font-size: 0.95rem;
+        text-align: right;
+        flex: 1 1 50%;
+      }
+    }
+  }
+
+  // Small devices (max 600px)
+  @media (max-width: 600px) {
+    ul li {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .day,
+      .hours {
+        flex: none;
+        width: 100%;
+        font-size: 1rem;
+        text-align: left;
+      }
+
+      .hours {
+        margin-top: 0.25rem;
+        color: #777;
+      }
+    }
+  }
+}
+
+.vacation-notice {
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
