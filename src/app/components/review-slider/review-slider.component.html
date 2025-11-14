@@ -1,0 +1,24 @@
+<div class="review-slider-container" *ngIf="reviews.length > 0">
+  <div class="review-display">
+    <div class="review-content">
+      <div class="author">
+        <img *ngIf="reviews[currentIndex].profile_photo_url"
+             [src]="reviews[currentIndex].profile_photo_url"
+             alt="Foto autore"
+             class="author-photo"/>
+        <span>{{ reviews[currentIndex].author_name }}</span>
+      </div>
+      <div class="rating">
+        <ng-container *ngFor="let star of [].constructor(5); let i = index">
+          <span [class.filled]="i < reviews[currentIndex].rating">★</span>
+        </ng-container>
+      </div>
+      <p class="text">{{ reviews[currentIndex].text }}</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button (click)="prev()">‹</button>
+    <button (click)="next()">›</button>
+  </div>
+</div>
