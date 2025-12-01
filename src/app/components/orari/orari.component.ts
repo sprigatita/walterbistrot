@@ -12,12 +12,12 @@ import {NgForOf} from '@angular/common';
 })
 export class OrariComponent {
   openingHours = [
-    { day: 'Monday', hours: 'Closed' },
-    { day: 'Tuesday', hours: '4pm - 10:30pm' },
-    { day: 'Wednesday', hours: '4pm - 10:30pm' },
-    { day: 'Thursday', hours: '4pm - 10:30pm' },
-    { day: 'Friday', hours: '4pm - 10:30pm' },
-    { day: 'Saturday', hours: '4pm - 10:30pm' },
-    { day: 'Sunday', hours: '4pm - 10:30pm' }
+    { day: 'Monday', hours: '5pm - 10:30pm' },
+    { day: 'Tuesday', hours: '5pm - 10:30pm' },
+    { day: 'Wednesday', hours: '5pm - 10:30pm' },
+    { day: 'Thursday', hours: '5pm - 10:30pm' },
+    { day: 'Friday', hours: '5pm - 10:30pm' },
+    { day: 'Saturday', hours: '12pm - 10:30pm' },
+    { day: 'Sunday', hours: 'Closed' }
   ];
 }
